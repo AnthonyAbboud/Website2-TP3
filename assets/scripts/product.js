@@ -15,6 +15,19 @@ const Service = {
 };
 
 const Controller = {
+
+  addCart: (e) => {
+    if( $('#product-quantity').val() > 0 && !isNaN($('#product-quantity').val())){
+      if(localStorage.getItem(id) == null){
+        localStorage.setItem(id, $('#product-quantity').val());
+      }
+      else {
+        localStorage.setItem(id, (parseInt($('#product-quantity').val()) + parseInt(localStorage.getItem(id))));
+      }
+      Controller.displayAddCart(e);
+    }
+  },
+
   urlParam: (name) => {
     var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
     if (results==null){
@@ -32,7 +45,8 @@ const Controller = {
 
   displayAddCart: (e) => {
     e.preventDefault();
-    if( $('#product-quantity').val() > 0 && !isNaN($('#product-quantity').val())){      
+    if( $('#product-quantity').val() > 0 && !isNaN($('#product-quantity').val())){  
+
       $('<p id="successdiv"></p>').appendTo('#add-to-cart-form');
       let timeOut = 5;
       jQuery('#successdiv').css("position", "absolute");
@@ -67,7 +81,7 @@ var id;
 
 Controller.urlParam("id");
 Service.loadProduct();
-  	
+
 $("#add-to-cart-form").submit(function(e) {
-  Controller.displayAddCart(e);
+  Controller.addCart(e);
 });
