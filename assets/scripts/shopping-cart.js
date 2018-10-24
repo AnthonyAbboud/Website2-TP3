@@ -13,7 +13,29 @@ const Service = {
     });
   },
 
+  deleteProduct: (itemRow, id) => {
+    if(confirm("Voulez-vous supprimer le produit du panier?")) {
+      $(itemRow).closest('tr').remove();
+      localStorage.removeItem(String(id));
+      Service.loadShoppingCart();
+    }
+    else{}
+  },
+
+  emptyCart: () => {
+    if(confirm("Voulez-vous supprimer tous les produits du panier?")) {
+      localStorage.clear();
+      Service.loadShoppingCart();
+    }
+    else{}
+  },
+
+  formatPrice: (price) => {
+    return price.toString().replace(".", ",");
+  }, 
+
   loadShoppingCart: () => {
+    products = [];
     $.getJSON('/data/products.json',function(data){
       for(let i = 0; i < localStorage.length; i++){
         $.each(data, function (index, product) {
@@ -25,12 +47,21 @@ const Service = {
       Service.alphabetizeList();
       Controller.display();
     });
+  },
+
+  totalRowPrice: (unitPrice, quantity) => {
+    var totalRowDot = parseFloat(unitPrice) * parseInt(quantity);
+    var totalRow = Service.formatPrice(totalRowDot);
+    totalPrice += parseFloat(totalRowDot);
+    return totalRow;
   }
 };
 
 const Controller = {
-
   display: () => {
+    $("tbody").empty();
+    $(".shopping-cart-total").empty();
+    totalPrice = 0;
     if(localStorage.length == 0) {
       $(".shopping-cart-table").hide();
       $(".shopping-cart-total").hide();
@@ -44,12 +75,15 @@ const Controller = {
       $("#empty-cart").show();
       $.each(products, function(index) {
         product = products[index];
-        $('<tr><td><button title="Supprimer"><i class="fa fa-times"></i></button></td><td><a href="./product.html?id=' + product["id"] + '">' + product["name"] + '</a></td></tr>').appendTo('tbody');
+        $('<tr><td><button id="' + product["id"] + '" title="Supprimer" onclick="Service.deleteProduct(this, this.id)"><i class="fa fa-times"></i></button></td><td><a href="./product.html?id=' + product["id"] + '">' + product["name"] + '</a></td><td>' + Service.formatPrice(product["price"]) + '&thinsp;$</td><td><div class="row"><div class="col"><button title="Retirer" disabled=""><i class="fa fa-minus"></i></button></div><div class="col">' + localStorage.getItem(product["id"]) + '</div><div class="col"><button title="Ajouter"><i class="fa fa-plus"></i></button></div></div></td><td>' + Service.totalRowPrice(product["price"] ,localStorage.getItem(product["id"])) + '&thinsp;$</td></tr>').appendTo('tbody');
       });
+      $('.shopping-cart-total').text('Total: ');
+      $('<strong>' + Service.formatPrice(totalPrice) + '&thinsp;$</strong>').appendTo('.shopping-cart-total');
     }
   }
 };
 
 var products = [];
+var totalPrice = 0;
 
 Service.loadShoppingCart();
