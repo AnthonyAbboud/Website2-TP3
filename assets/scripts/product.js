@@ -40,32 +40,32 @@ const Controller = {
 
   displayNotFound: () => {
     $('main').css("display","none");
-    $('body').append('<h1> Page non trouvée !</h1>');
+    $('body').append('<h1>Page non trouvée!</h1>');
   },
 
   displayAddCart: (e) => {
     e.preventDefault();
     if( $('#product-quantity').val() > 0 && !isNaN($('#product-quantity').val())){  
 
-      $('<p id="successdiv"></p>').appendTo('#add-to-cart-form');
+      $('<p id="dialog"></p>').appendTo('#add-to-cart-form');
       let timeOut = 5;
-      jQuery('#successdiv').css("position", "absolute");
-      jQuery('#successdiv').css("border", "12px solid black");
-      jQuery('#successdiv').css("background", "black");
-      jQuery('#successdiv').css("color", "white");
-      jQuery('#successdiv').css("right", "40%");
-      jQuery('#successdiv').css("bottom", "0px");
-      jQuery('#successdiv').text('Le produit a été ajouté au panier.').fadeIn();
-      jQuery('#successdiv').css("display", "block");
+      jQuery('#dialog').css("position", "absolute");
+      jQuery('#dialog').css("border", "12px solid black");
+      jQuery('#dialog').css("background", "black");
+      jQuery('#dialog').css("color", "white");
+      jQuery('#dialog').css("right", "40%");
+      jQuery('#dialog').css("bottom", "0px");
+      jQuery('#dialog').text('Le produit a été ajouté au panier.').fadeIn();
+      jQuery('#dialog').css("display", "block");
       setTimeout(function() {
-        jQuery('#successdiv').fadeOut();
-        jQuery('#successdiv').css("display", "none");
+        jQuery('#dialog').fadeOut();
+        jQuery('#dialog').css("display", "none");
       }, timeOut * 1000);
     }
   },
 
   displayProduct: (product) => {
-    $('h1').text(product.name);
+    $('#product-name').text(product.name);
     $('#product-image').attr('alt', product.name);
     $('#product-image').attr('src', './assets/img/'+product.image);
     $('.col > section > p').text(product.description);

@@ -26,13 +26,13 @@
 			    	"regex": '(0[1-9]|1[0-2])\/[0-9]{2}',
 			     }
 		   },
-		   messages: {
-				  "first-name": "Veuillez fournir au moins 2 caractères",
-				  "last-name": "Veuillez fournir au moins 2 caractères",
-			      "email": "Ce champ est obligatoire",
-			      "phone": "Ce champ est obligatoire",
-			      "credit-card":"Ce champ est obligatoire",
-			      "credit-card-expiry": "La date d'expiration de votre carte de crédit est invalide",
+		   messages: { 
+				  "first-name": "Veuillez fournir au moins 2 caractères.",
+				  "last-name": "Veuillez fournir au moins 2 caractères.",
+			      "email": "Veuillez fournir une adresse électronique valide.",
+			      "phone": "Ce champ est obligatoire.",
+			      "credit-card":"Ce champ est obligatoire.",
+			      "credit-card-expiry": "La date d'expiration de votre carte de crédit est invalide.",
 		  },
 		  submitHandler: function(form) {
 			  var numOrder = 1;

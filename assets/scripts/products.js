@@ -65,7 +65,7 @@ const Controller = {
 		$("#products-list").empty();
 		$.each(productsTable, function(index) {
 			var product = productsTable[index];
-			$("#products-list").append("<div class=\"product\"><a href=\"./product.html?id=" + product["id"] + "\" title=\"En savoir plus...\"><h2>" + product["name"] + "</h2><img alt=\"" + product["name"] + "\" src=\"./assets/img/" + product["image"] + "\"><p class=\"price\"><small>Prix </small>" + product["price"] + "&thinsp;$</p></a></div>");
+			$("#products-list").append("<div class=\"product\"><a href=\"./product.html?id=" + product["id"] + "\" title=\"En savoir plus...\"><h2>" + product["name"] + "</h2><img alt=\"" + product["name"] + "\" src=\"./assets/img/" + product["image"] + "\"><p class=\"price\"><small>Prix </small>" + product["price"].toString().replace(/\./g, ',') + "&thinsp;$</p></a></div>");
 		});
 		$("#products-count").text(productsTable.length + " produits");
 	},
