@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="3"
+            tests="3">
+
+  <testsuite name="2-product"
+    errors="1" failures="3" hostname="" id="" package="2-product" skipped="0"
+    tests="3" time="28.09" timestamp="Sat, 13 Oct 2018 23:09:33 GMT">
+  
+    <testcase name="Page d&#39;un produit" classname="2-product" time="25.82" assertions="1">  <failure message="Le nom du produit doit être &#39;Console Wii&#39;.">    at Object.Page d&#39;un produit (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\2-product.js:37:15)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Produit invalide" classname="2-product" time="1.616" assertions="1">  <failure message="Lorsqu&#39;un identifiant invalide est spécifié à la page d&#39;un produit, le titre doit indiquer &#39;Page non trouvée!&#39;.">    at Object.Produit invalide (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\2-product.js:63:15)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Ajout de produits dans le panier" classname="2-product" time="0.6560" assertions="1">  <failure message="Le nombre de produits dans le panier ne doit pas être visible lorsque le panier est vide.">    at validateShoppingCartQuantity (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\2-product.js:19:19)
+    at Object.Ajout de produits dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\2-product.js:76:5)</failure>
+
+    
+    </testcase>
+  
+
+  
+    <system-err>
+        Error while running [1 Products / Liste des produits pour les valeurs par defauts]:
+
+  AssertionError [ERR_ASSERTION]: Le lien pour le produit #1 doit être &#39;product.html?id=13&#39;.
+    at Object.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\1-products.js:71:15)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:382:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\http\request.js:170:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+  Error while running [1 Products / Categories des produits]:
+
+  AssertionError [ERR_ASSERTION]: Le prix pour le produit #1 doit être &#39;299,99$&#39;.
+    at Object.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\1-products.js:54:11)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:382:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\http\request.js:170:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+  Error while running [1 Products / Classement des produits]:
+
+  AssertionError [ERR_ASSERTION]: Le lien pour le produit #1 doit être &#39;product.html?id=13&#39;.
+    at Object.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\1-products.js:71:15)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:382:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\http\request.js:170:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+ERROR: Unable to locate element: &#34;#product-name&#34; using: css selector
+    at F.command (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\api\assertions\containsText.js:46:21)
+    at F.module.exports.BaseAssertion._scheduleAssertion (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\assertion.js:87:17)
+    at F.module.exports.BaseAssertion._executeCommand (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\assertion.js:82:17)
+    at AssertionInstance.commandFn [as _commandFn] (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\assertion.js:180:21)
+    at AsyncTree.runCommand (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:154:30)
+    at AsyncTree.runChildNode (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:114:8)
+    at AsyncTree.walkDown (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:80:10)
+    at AsyncTree.walkUp (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:97:8)
+    at AsyncTree.walkDown (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:90:12)
+    at AsyncTree.walkUp (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:97:8)
+ERROR: Unable to locate element: &#34;#add-to-cart-form input&#34; using: css selector
+    at C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:160:10
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Un ou plusieurs produits dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:157:22)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+ERROR: Unable to locate element: &#34;#add-to-cart-form input&#34; using: css selector
+    at C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:161:10
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Un ou plusieurs produits dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:157:22)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+ERROR: Unable to locate element: &#34;#add-to-cart-form&#34; using: css selector
+    at C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:162:10
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Un ou plusieurs produits dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:157:22)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+ERROR: Unable to locate element: &#34;#add-to-cart-form input&#34; using: css selector
+    at C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:160:10
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Un ou plusieurs produits dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:157:22)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+ERROR: Unable to locate element: &#34;#add-to-cart-form input&#34; using: css selector
+    at C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:161:10
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Un ou plusieurs produits dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:157:22)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+ERROR: Unable to locate element: &#34;#add-to-cart-form&#34; using: css selector
+    at C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:162:10
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Un ou plusieurs produits dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:157:22)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+ERROR: Unable to locate element: &#34;#add-to-cart-form input&#34; using: css selector
+    at C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:160:10
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Un ou plusieurs produits dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:157:22)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+ERROR: Unable to locate element: &#34;#add-to-cart-form input&#34; using: css selector
+    at C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:161:10
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Un ou plusieurs produits dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:157:22)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+ERROR: Unable to locate element: &#34;#add-to-cart-form&#34; using: css selector
+    at C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:162:10
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Un ou plusieurs produits dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:157:22)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+  Error while running [3 Shopping Cart / Un ou plusieurs produits dans le panier]:
+
+  AssertionError [ERR_ASSERTION]: Le prix unitaire pour le product &#39;Canon EOS 5D Mark II&#39; doit être 2999,99$.
+    at Object.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:48:16)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:382:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\http\request.js:170:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+ERROR: Unable to locate element: &#34;.remove-item-button&#34; using: css selector
+    at pressRemoveItemButton (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:175:21)
+    at Object.Suppression d&#39;un item dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:180:5)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+    at flush (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:125:13)
+  Error while running [3 Shopping Cart / Suppression d&#39;un item dans le panier]:
+
+  AssertionError [ERR_ASSERTION]: Le prix unitaire pour le product &#39;Canon EOS 5D Mark II&#39; doit être 2999,99$.
+    at Object.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:48:16)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:382:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\http\request.js:170:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+ERROR: Unable to locate element: &#34;.add-quantity-button&#34; using: css selector
+    at Object.Augmentation de la quantite associee a un item dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:200:12)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+    at flush (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+  Error while running [3 Shopping Cart / Augmentation de la quantite associee a un item dans le panier]:
+
+  AssertionError [ERR_ASSERTION]: Le prix unitaire pour le product &#39;Canon EOS 5D Mark II&#39; doit être 2999,99$.
+    at Object.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:48:16)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:382:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\http\request.js:170:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+ERROR: Unable to locate element: &#34;.remove-quantity-button&#34; using: css selector
+    at Object.Diminution de la quantite associee a un item dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:209:12)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+    at flush (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+  Error while running [3 Shopping Cart / Diminution de la quantite associee a un item dans le panier]:
+
+  AssertionError [ERR_ASSERTION]: Le prix unitaire pour le product &#39;Canon EOS 5D Mark II&#39; doit être 2999,99$.
+    at Object.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:48:16)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:382:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\http\request.js:170:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+ERROR: Unable to locate element: &#34;#remove-all-items-button&#34; using: css selector
+    at pressRemoveAllItemsButton (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:219:21)
+    at Object.Suppression de tous les produits dans le panier (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:224:5)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+    at flush (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:125:13)
+  Error while running [3 Shopping Cart / Suppression de tous les produits dans le panier]:
+
+  AssertionError [ERR_ASSERTION]: Le prix unitaire pour le product &#39;Canon EOS 5D Mark II&#39; doit être 2999,99$.
+    at Object.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\3-shopping-cart.js:48:16)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\index.js:382:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\http\request.js:170:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+ERROR: Unable to locate element: &#34;#add-to-cart-form input&#34; using: css selector
+    at Object.before (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\4-order.js:71:8)
+    at Object.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\util\utils.js:35:8)
+    at TestSuite.runHookMethod (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:591:17)
+    at TestSuite.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:105:16)
+    at TestSuite.makePromise (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:528:8)
+    at Object.before (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:84:21)
+    at TestSuite.before (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:426:21)
+    at TestSuite.runTestSuiteModule (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:313:15)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:227:21
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+ERROR: Unable to locate element: &#34;#add-to-cart-form input&#34; using: css selector
+    at Object.before (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\4-order.js:72:8)
+    at Object.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\util\utils.js:35:8)
+    at TestSuite.runHookMethod (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:591:17)
+    at TestSuite.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:105:16)
+    at TestSuite.makePromise (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:528:8)
+    at Object.before (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:84:21)
+    at TestSuite.before (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:426:21)
+    at TestSuite.runTestSuiteModule (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:313:15)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:227:21
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+ERROR: Unable to locate element: &#34;#add-to-cart-form&#34; using: css selector
+    at Object.before (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\4-order.js:73:8)
+    at Object.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\util\utils.js:35:8)
+    at TestSuite.runHookMethod (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:591:17)
+    at TestSuite.&lt;anonymous&gt; (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:105:16)
+    at TestSuite.makePromise (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:528:8)
+    at Object.before (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:84:21)
+    at TestSuite.before (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:426:21)
+    at TestSuite.runTestSuiteModule (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:313:15)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testsuite.js:227:21
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+ERROR: Unable to locate element: &#34;#order-form&#34; using: css selector
+    at Object.Soumission d&#39;un formulaire invalide (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\4-order.js:94:12)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+    at flush (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+ERROR: Unable to locate element: &#34;#first-name-error&#34; using: css selector
+    at F.command (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\api\assertions\containsText.js:46:21)
+    at F.module.exports.BaseAssertion._scheduleAssertion (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\assertion.js:87:17)
+    at F.module.exports.BaseAssertion._executeCommand (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\assertion.js:82:17)
+    at AssertionInstance.commandFn [as _commandFn] (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\assertion.js:180:21)
+    at AsyncTree.runCommand (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:154:30)
+    at AsyncTree.runChildNode (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:114:8)
+    at AsyncTree.walkDown (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:80:10)
+    at AsyncTree.walkUp (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:97:8)
+    at AsyncTree.walkDown (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:90:12)
+    at AsyncTree.walkUp (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:97:8)
+ERROR: Unable to locate element: &#34;#first-name-error&#34; using: css selector
+    at F.command (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\api\assertions\containsText.js:46:21)
+    at F.module.exports.BaseAssertion._scheduleAssertion (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\assertion.js:87:17)
+    at F.module.exports.BaseAssertion._executeCommand (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\assertion.js:82:17)
+    at AssertionInstance.commandFn [as _commandFn] (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\assertion.js:180:21)
+    at AsyncTree.runCommand (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:154:30)
+    at AsyncTree.runChildNode (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:114:8)
+    at AsyncTree.walkDown (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:80:10)
+    at AsyncTree.walkUp (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:97:8)
+    at AsyncTree.walkDown (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:90:12)
+    at AsyncTree.traverse (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\core\queue.js:73:8)
+ERROR: Unable to locate element: &#34;#order-form&#34; using: css selector
+    at Object.Soumission d&#39;un formulaire valide (C:\Users\horizon\Desktop\LOG4420\TP3\tests\e2e\4-order.js:124:12)
+    at Module.call (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:796:13)
+    at C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:137:13)
+    at flush (C:\Users\horizon\Desktop\LOG4420\TP3\node_modules\q\q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>
