@@ -35,7 +35,12 @@
 			      "credit-card-expiry": "La date d'expiration de votre carte de crédit est invalide",
 		  },
 		  submitHandler: function(form) {
-			  var numOrder = localStorage.length+1;
+			  var numOrder = 1;
+			  for(let i = 0; i < localStorage.length; i++){
+				  if (localStorage.getItem("order") != null) {
+		            numOrder++;
+		          }
+			  }
 			  var numOrderLg = numOrder.length;
 			  var zerosAgauche = (numOrderLg >3?"":"0") + (numOrderLg >2?"":"0")
                 + (numOrderLg >1?"":"0") + (numOrderLg >0?"":"0") + numOrder;
@@ -44,7 +49,7 @@
 					  "last_name": $('#last-name').val(),
 					  "number": zerosAgauche,
 					};
-			  localStorage.setItem(localStorage.length+1,JSON.stringify(order));
+			  localStorage.setItem("order",JSON.stringify(order));
 			  form.submit();
 		  }  
   });
