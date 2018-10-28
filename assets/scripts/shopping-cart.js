@@ -1,5 +1,11 @@
 const Service = {
 
+  addOneItem: (itemID) => {
+    currentAmount = parseInt(localStorage.getItem(itemID));
+    localStorage.setItem(itemID, (currentAmount+1));
+    Service.loadShoppingCart();
+  },
+
   alphabetizeList: () => {
     products.sort(function(a, b) {
       if (a["name"] < b["name"]) {
@@ -31,7 +37,7 @@ const Service = {
   },
 
   formatPrice: (price) => {
-    return price.toString().replace(".", ",");
+    return price.toFixed(2).replace(".", ",");
   }, 
 
   loadShoppingCart: () => {
@@ -47,6 +53,21 @@ const Service = {
       Service.alphabetizeList();
       Controller.display();
     });
+  },
+
+  removeOneItem: (itemID) => {
+    currentAmount = localStorage.getItem(itemID);
+    localStorage.setItem(itemID, (currentAmount-1));
+    Service.loadShoppingCart();
+  },
+
+  setMinusButton: (quantity) => {
+    if (parseInt(quantity) == 1) {
+      return "disabled";
+    }
+    else {
+      return "";
+    }
   },
 
   totalRowPrice: (unitPrice, quantity) => {
@@ -75,7 +96,7 @@ const Controller = {
       $("#empty-cart").show();
       $.each(products, function(index) {
         product = products[index];
-        $('<tr><td><button id="' + product["id"] + '" title="Supprimer" onclick="Service.deleteProduct(this, this.id)"><i class="fa fa-times"></i></button></td><td><a href="./product.html?id=' + product["id"] + '">' + product["name"] + '</a></td><td>' + Service.formatPrice(product["price"]) + '&thinsp;$</td><td><div class="row"><div class="col"><button title="Retirer" disabled=""><i class="fa fa-minus"></i></button></div><div class="col">' + localStorage.getItem(product["id"]) + '</div><div class="col"><button title="Ajouter"><i class="fa fa-plus"></i></button></div></div></td><td>' + Service.totalRowPrice(product["price"] ,localStorage.getItem(product["id"])) + '&thinsp;$</td></tr>').appendTo('tbody');
+        $('<tr><td><button id="' + product["id"] + '" title="Supprimer" onclick="Service.deleteProduct(this, this.id)"><i class="fa fa-times"></i></button></td><td><a href="./product.html?id=' + product["id"] + '">' + product["name"] + '</a></td><td>' + Service.formatPrice(product["price"]) + '&thinsp;$</td><td><div class="row"><div class="col"><button title="Retirer" onclick="Service.removeOneItem(' + product["id"] + ')" ' + Service.setMinusButton(localStorage.getItem(product["id"])) + ' ><i class="fa fa-minus"></i></button></div><div class="col">' + localStorage.getItem(product["id"]) + '</div><div class="col"><button title="Ajouter" onclick="Service.addOneItem(' + product["id"] + ')"><i class="fa fa-plus"></i></button></div></div></td><td>' + Service.totalRowPrice(product["price"] ,localStorage.getItem(product["id"])) + '&thinsp;$</td></tr>').appendTo('tbody');
       });
       $('.shopping-cart-total').text('Total: ');
       $('<strong>' + Service.formatPrice(totalPrice) + '&thinsp;$</strong>').appendTo('.shopping-cart-total');
