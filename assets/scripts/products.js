@@ -16,8 +16,8 @@ const Service = {
                 itemA = a["price"];
                 itemB = b["price"];
             } else if (rank === "A-Z" || rank === "Z-A") {
-                itemA = a["name"];
-                itemB = b["name"];
+                itemA = a["name"].toLowerCase();
+                itemB = b["name"].toLowerCase();
             }
 
             if (rank === "low-high" || rank === "A-Z") {

@@ -4,6 +4,7 @@ const Service = {
     currentAmount = parseInt(localStorage.getItem(itemID));
     localStorage.setItem(itemID, (currentAmount+1));
     Service.loadShoppingCart();
+    ServiceCurrentShoppingCart.loadCurrentShoppingCart();
   },
 
   alphabetizeList: () => {
@@ -24,6 +25,7 @@ const Service = {
       $(itemRow).closest('tr').remove();
       localStorage.removeItem(String(id));
       Service.loadShoppingCart();
+      ServiceCurrentShoppingCart.loadCurrentShoppingCart();
     }
     else{}
   },
@@ -32,6 +34,7 @@ const Service = {
     if(confirm("Voulez-vous supprimer tous les produits du panier?")) {
       localStorage.clear();
       Service.loadShoppingCart();
+      ServiceCurrentShoppingCart.loadCurrentShoppingCart();
     }
     else{}
   },
@@ -59,6 +62,7 @@ const Service = {
     currentAmount = localStorage.getItem(itemID);
     localStorage.setItem(itemID, (currentAmount-1));
     Service.loadShoppingCart();
+    ServiceCurrentShoppingCart.loadCurrentShoppingCart();
   },
 
   setMinusButton: (quantity) => {
@@ -87,16 +91,16 @@ const Controller = {
       $(".shopping-cart-table").hide();
       $(".shopping-cart-total").hide();
       $("#order").hide();
-      $("#empty-cart").hide();
-      $('<p id="emptyCartText">Aucun produit dans le panier.</p>').appendTo('article');
+      $("#remove-all-items-button").hide();
+      $('table').before('<p id="emptyCartText">Aucun produit dans le panier.</p>');
     }
     else {
       $(".shopping-cart-total").show();
       $("#order").show();
-      $("#empty-cart").show();
+      $("#remove-all-items-button").show();
       $.each(products, function(index) {
         product = products[index];
-        $('<tr><td><button id="' + product["id"] + '" title="Supprimer" onclick="Service.deleteProduct(this, this.id)"><i class="fa fa-times"></i></button></td><td><a href="./product.html?id=' + product["id"] + '">' + product["name"] + '</a></td><td>' + Service.formatPrice(product["price"]) + '&thinsp;$</td><td><div class="row"><div class="col"><button title="Retirer" onclick="Service.removeOneItem(' + product["id"] + ')" ' + Service.setMinusButton(localStorage.getItem(product["id"])) + ' ><i class="fa fa-minus"></i></button></div><div class="col">' + localStorage.getItem(product["id"]) + '</div><div class="col"><button title="Ajouter" onclick="Service.addOneItem(' + product["id"] + ')"><i class="fa fa-plus"></i></button></div></div></td><td>' + Service.totalRowPrice(product["price"] ,localStorage.getItem(product["id"])) + '&thinsp;$</td></tr>').appendTo('tbody');
+        $('<tr><td><button class="remove-item-button" id="' + product["id"] + '" title="Supprimer" onclick="Service.deleteProduct(this, this.id)"><i class="fa fa-times"></i></button></td><td><a href="./product.html?id=' + product["id"] + '">' + product["name"] + '</a></td><td>' + Service.formatPrice(product["price"]) + '&thinsp;$</td><td><div class="row"><div class="remove-quantity-button"><button title="Retirer" onclick="Service.removeOneItem(' + product["id"] + ')" ' + Service.setMinusButton(localStorage.getItem(product["id"])) + ' ><i class="fa fa-minus"></i></button></div><div class="quantity">' + localStorage.getItem(product["id"]) + '</div><div class="add-quantity-button"><button title="Ajouter" onclick="Service.addOneItem(' + product["id"] + ')"><i class="fa fa-plus"></i></button></div></div></td><td>' + Service.totalRowPrice(product["price"] ,localStorage.getItem(product["id"])) + '&thinsp;$</td></tr>').appendTo('tbody');
       });
       $('.shopping-cart-total').text('Total: ');
       $('<strong>' + Service.formatPrice(totalPrice) + '&thinsp;$</strong>').appendTo('.shopping-cart-total');

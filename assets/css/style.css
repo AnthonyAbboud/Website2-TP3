@@ -120,7 +120,7 @@ a:hover {
   clear: both;
   flex-wrap: wrap;
 }
-.row > .col {
+.row > .col, .remove-quantity-button, .add-quantity-button, .remove-item-button {
   padding: 0 10px;
   flex: 1;
 }

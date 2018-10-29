@@ -3,36 +3,48 @@
 		  rules: {
 			   "first-name":{
 		            "required": true,
-		            "minlength": 2,
+		            "minlength": 2
 		         },
 		         "last-name":{
 			        "required": true,
-			        "minlength": 2,
+			        "minlength": 2
 			     },
 			     "email":{
 			        "required": true,
-			        "email": true,
+			        "email": true
 			     },
 			     "phone":{
 			    	"required": true,
-			    	"phoneUS": true,
+			    	"phoneUS": true
 			     },
 			     "credit-card":{
 			    	"required": true,
-			    	"creditcard": true,
+			    	"creditcard": true
 			     },
 			     "credit-card-expiry":{
 			    	"required": true, 
-			    	"regex": '(0[1-9]|1[0-2])\/[0-9]{2}',
+			    	"regex": '(0[1-9]|1[0-2])\/[0-9]{2}'
 			     }
 		   },
 		   messages: { 
-				  "first-name": "Veuillez fournir au moins 2 caractères.",
-				  "last-name": "Veuillez fournir au moins 2 caractères.",
-			      "email": "Veuillez fournir une adresse électronique valide.",
+				  "first-name": {
+                    "required": "Ce champ est obligatoire.",
+                    "minlength" : "Veuillez fournir au moins 2 caractères."
+                  },
+				  "last-name": {
+                    "required": "Ce champ est obligatoire.",
+                    "minlength" : "Veuillez fournir au moins 2 caractères."
+                  },
+			      "email": {
+                    "required": "Ce champ est obligatoire.",
+                    "email" : "Veuillez fournir une adresse électronique valide."
+                  },
 			      "phone": "Ce champ est obligatoire.",
 			      "credit-card":"Ce champ est obligatoire.",
-			      "credit-card-expiry": "La date d'expiration de votre carte de crédit est invalide.",
+			      "credit-card-expiry": {
+                    "required": "Ce champ est obligatoire.",
+                    "regex" : "La date d'expiration de votre carte de crédit est invalide.",
+                  },
 		  },
 		  submitHandler: function(form) {
 			  var numOrder = 1;

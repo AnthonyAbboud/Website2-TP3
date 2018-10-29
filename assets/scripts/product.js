@@ -1,4 +1,9 @@
 const Service = {
+
+    formatPrice: (price) => {
+      return price.toFixed(2).replace(".", ",");
+    },
+ 
     loadProduct: () => {
       $.getJSON('/data/products.json',function(data){
         if (id > data.length || id < 1 || isNaN(id)) {
@@ -39,15 +44,14 @@ const Controller = {
   },
 
   displayNotFound: () => {
-    $('main').css("display","none");
-    $('body').append('<h1>Page non trouvée!</h1>');
+    $('article').empty();
+    $('article').append('<h1>Page non trouvée!</h1>');
   },
 
   displayAddCart: (e) => {
     e.preventDefault();
     if( $('#product-quantity').val() > 0 && !isNaN($('#product-quantity').val())){  
 
-      $('<p id="dialog"></p>').appendTo('#add-to-cart-form');
       let timeOut = 5;
       jQuery('#dialog').css("position", "absolute");
       jQuery('#dialog').css("border", "12px solid black");
@@ -65,15 +69,21 @@ const Controller = {
   },
 
   displayProduct: (product) => {
-    $('#product-name').text(product.name);
+    $('article').empty();
+    $('article').append('<h1 id="product-name">' + product.name + '</h1>');
+    $('article').append('<div class="row"><div class="col"><img id="product-image"></div><div class="col"><section><h2>Description</h2><p id="product-desc"></p></section><section><h2>Caractéristiques</h2><ul id="product-features"></ul></section><hr><form class="pull-right" id="add-to-cart-form"><label for="product-quantity">Quantité:</label><input class="form-control" id="product-quantity" type="number" value="1" min="1"><button class="btn" title="Ajouter au panier" type="submit"><i class="fa fa-cart-plus"></i>&nbsp; Ajouter</button></form><p>Prix: <strong id="product-price"></strong></p></div></div>');
     $('#product-image').attr('alt', product.name);
     $('#product-image').attr('src', './assets/img/'+product.image);
-    $('.col > section > p').text(product.description);
+    $('#product-desc').append(product.description);
     for (var i =0 ; i < product.features.length ; i++){
       $('<li>').appendTo('.col > section > ul')
       .append(product.features[i]);
     }
-    $('p > strong').append(product.price + '&thinsp;$');
+    $('p > strong').append(Service.formatPrice(product.price) + '&thinsp;$');
+    $('<p id="dialog"></p>').appendTo('article');
+    $("#add-to-cart-form").submit(function(e) {
+       Controller.addCart(e);
+    });
   }
 };
 
@@ -82,6 +92,4 @@ var id;
 Controller.urlParam("id");
 Service.loadProduct();
 
-$("#add-to-cart-form").submit(function(e) {
-  Controller.addCart(e);
-});
+
