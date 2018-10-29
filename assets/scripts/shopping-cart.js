@@ -4,7 +4,7 @@ const Service = {
     currentAmount = parseInt(localStorage.getItem(itemID));
     localStorage.setItem(itemID, (currentAmount+1));
     Service.loadShoppingCart();
-    ServiceCurrentShoppingCart.loadCurrentShoppingCart();
+    ServiceHeader.loadCurrentShoppingCart();
   },
 
   alphabetizeList: () => {
@@ -62,7 +62,7 @@ const Service = {
     currentAmount = localStorage.getItem(itemID);
     localStorage.setItem(itemID, (currentAmount-1));
     Service.loadShoppingCart();
-    ServiceCurrentShoppingCart.loadCurrentShoppingCart();
+    ServiceHeader.loadCurrentShoppingCart();
   },
 
   setMinusButton: (quantity) => {

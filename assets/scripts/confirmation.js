@@ -6,7 +6,9 @@
   const Controller = {
 		  Confirm: (order) => {
 			  $('#name').append('Votre commande est confirm&eacute;e ' + order["first_name"] +' ' + order["last_name"] + "!");
-			  $('#confirmation-number').append(order["number"]);
+        $('#confirmation-number').append(order["number"]);
+        localStorage.clear();
+        ServiceHeader.loadCurrentShoppingCart();
 		  }
   }
   

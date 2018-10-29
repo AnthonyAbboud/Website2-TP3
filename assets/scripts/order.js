@@ -23,7 +23,7 @@
 			     },
 			     "credit-card-expiry":{
 			    	"required": true, 
-			    	"regex": '(0[1-9]|1[0-2])\/[0-9]{2}'
+			    	"regex": '(0[1-9]|1[0-2])/[0-9]{2}$'
 			     }
 		   },
 		   messages: { 
@@ -39,8 +39,14 @@
                     "required": "Ce champ est obligatoire.",
                     "email" : "Veuillez fournir une adresse électronique valide."
                   },
-			      "phone": "Ce champ est obligatoire.",
-			      "credit-card":"Ce champ est obligatoire.",
+			      "phone": {
+                    "required": "Ce champ est obligatoire.",
+                    "phoneUS" : "Veuillez fournir un numéro de téléphone valide."
+                  },
+			      "credit-card": {
+                    "required": "Ce champ est obligatoire.",
+                    "creditcard" : "Veuillez fournir un numéro de carte de crédit valide."
+                  },
 			      "credit-card-expiry": {
                     "required": "Ce champ est obligatoire.",
                     "regex" : "La date d'expiration de votre carte de crédit est invalide.",

@@ -83,6 +83,7 @@ const Controller = {
     $('<p id="dialog"></p>').appendTo('article');
     $("#add-to-cart-form").submit(function(e) {
        Controller.addCart(e);
+       ServiceHeader.loadCurrentShoppingCart();
     });
   }
 };

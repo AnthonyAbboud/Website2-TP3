@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="4">
+
+  <testsuite name="4-order"
+    errors="0" failures="0" hostname="" id="" package="4-order" skipped="0"
+    tests="4" time="4.328" timestamp="Mon, 29 Oct 2018 22:32:19 GMT">
+  
+    <testcase name="État du panier d&#39;achats" classname="4-order" time="1.635" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Soumission d&#39;un formulaire invalide" classname="4-order" time="0.4110" assertions="7">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Remplissage du formulaire" classname="4-order" time="1.747" assertions="14">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Soumission d&#39;un formulaire valide" classname="4-order" time="0.5350" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+    <system-err>
+        Error while running [3 Shopping Cart / Un ou plusieurs produits dans le panier]:
+
+  TypeError: result.value.indexOf is not a function
+    at Object.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/tests/e2e/3-shopping-cart.js:87:34)
+    at HttpRequest.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/index.js:393:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/http/request.js:172:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+  Error while running [3 Shopping Cart / Suppression d&#39;un item dans le panier]:
+
+  TypeError: result.value.indexOf is not a function
+    at Object.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/tests/e2e/3-shopping-cart.js:87:34)
+    at HttpRequest.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/index.js:393:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/http/request.js:172:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+  Error while running [3 Shopping Cart / Augmentation de la quantite associee a un item dans le panier]:
+
+  TypeError: result.value.indexOf is not a function
+    at Object.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/tests/e2e/3-shopping-cart.js:87:34)
+    at HttpRequest.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/index.js:393:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/http/request.js:172:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+  Error while running [3 Shopping Cart / Diminution de la quantite associee a un item dans le panier]:
+
+  TypeError: result.value.indexOf is not a function
+    at Object.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/tests/e2e/3-shopping-cart.js:87:34)
+    at HttpRequest.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/index.js:393:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/http/request.js:172:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+  Error while running [3 Shopping Cart / Suppression de tous les produits dans le panier]:
+
+  TypeError: result.value.indexOf is not a function
+    at Object.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/tests/e2e/3-shopping-cart.js:87:34)
+    at HttpRequest.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/index.js:366:18)
+    at emitTwo (events.js:126:13)
+    at HttpRequest.emit (events.js:214:7)
+    at HttpRequest.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/index.js:393:15)
+    at emitThree (events.js:136:13)
+    at HttpRequest.emit (events.js:217:7)
+    at IncomingMessage.&lt;anonymous&gt; (/usagers1/anabbb/LOG4420/TP3/Website2-TP3/node_modules/nightwatch/lib/http/request.js:172:16)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>

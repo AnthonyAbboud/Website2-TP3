@@ -1,6 +1,6 @@
 "use strict";
 
-const ServiceCurrentShoppingCart = {
+const ServiceHeader = {
 		loadCurrentShoppingCart: () => {
 			var counter = 0;
 			$.getJSON('/data/products.json',function(data){
@@ -11,21 +11,22 @@ const ServiceCurrentShoppingCart = {
 		          }
 		        });
 		      }
-		      ControllerCurrentShoppingCart.DisplayCurrentCart(counter);
+		      ControllerHeader.DisplayCurrentCart(counter);
 			});
 		}
 }
 
-const ControllerCurrentShoppingCart = {
+const ControllerHeader = {
 		DisplayCurrentCart: (counter) => {
+			$(".count").empty();
 			if (counter == 0){
-				$(".count").css("display", "none");
+				$(".count").hide();
 			}else{
-				$(".count").css("display", "block");
+				$(".count").show();
 				$(".count").append(counter);
 			}
 		}
 }
 
-ServiceCurrentShoppingCart.loadCurrentShoppingCart();
+ServiceHeader.loadCurrentShoppingCart();
 
