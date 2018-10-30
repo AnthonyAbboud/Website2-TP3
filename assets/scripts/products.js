@@ -1,4 +1,6 @@
+/* Service */
 const Service = {
+	/* Loads products information from the json file */
 	loadProducts: () => {
 		$.getJSON("./data/products.json", function(data) {
 			$.each(data, function(product) {
@@ -8,6 +10,7 @@ const Service = {
 		});
 	},
 
+	/* Sorts and filters the products in various orders and conditions */
 	sortProducts: (products) => {
 		products.sort(function(a, b) {
 			var itemA;
@@ -60,7 +63,9 @@ const Service = {
 	}
 };
 
+/* Controller */
 const Controller = {
+	/* Displays the products */
 	display: (productsTable) => {
 		$("#products-list").empty();
 		$.each(productsTable, function(index) {
@@ -70,6 +75,7 @@ const Controller = {
 		$("#products-count").text(productsTable.length + " produits");
 	},
 
+	/* Updates the filter buttons */
 	updateFilterButtons: (parentId, id) => {
 		if(parentId == "product-categories") {
 			category = id;
@@ -87,6 +93,7 @@ var category = "all-products";
 
 Service.loadProducts();
 
+/* When a filter button gets clicked... */
 $("button").click(function() {
 	var id = $(this).attr("id");
 	var parentId = $(this).parent().attr("id");

@@ -1,9 +1,11 @@
+/* Service */
 const Service = {
-
+    /* Replaces the dots with commas for the display */
     formatPrice: (price) => {
       return price.toFixed(2).replace(".", ",");
     },
  
+    /* Loads the product's information */
     loadProduct: () => {
       $.getJSON('/data/products.json',function(data){
         if (id > data.length || id < 1 || isNaN(id)) {
@@ -19,12 +21,13 @@ const Service = {
     }
 };
 
+/* Controller */
 const Controller = {
-
+  /* Adds the requested amount of this item to the cart (localStorage) */
   addCart: (e) => {
     if( $('#product-quantity').val() > 0 && !isNaN($('#product-quantity').val())){
       if(localStorage.getItem(id) == null){
-        localStorage.setItem(id, $('#product-quantity').val());
+        localStorage.setItem(id, parseInt($('#product-quantity').val()));
       }
       else {
         localStorage.setItem(id, (parseInt($('#product-quantity').val()) + parseInt(localStorage.getItem(id))));
@@ -33,6 +36,7 @@ const Controller = {
     }
   },
 
+  /* Gets the URL parameter */
   urlParam: (name) => {
     var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
     if (results==null){
@@ -43,11 +47,13 @@ const Controller = {
     }
   },
 
+  /* Page not found error message */
   displayNotFound: () => {
     $('article').empty();
     $('article').append('<h1>Page non trouvée!</h1>');
   },
 
+  /* Displays the added to cart popup */
   displayAddCart: (e) => {
     e.preventDefault();
     if( $('#product-quantity').val() > 0 && !isNaN($('#product-quantity').val())){  
@@ -67,7 +73,7 @@ const Controller = {
       }, timeOut * 1000);
     }
   },
-
+  /* Displays the product's information */
   displayProduct: (product) => {
     $('article').empty();
     $('article').append('<h1 id="product-name">' + product.name + '</h1>');

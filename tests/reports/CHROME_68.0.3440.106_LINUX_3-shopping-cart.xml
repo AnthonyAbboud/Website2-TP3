@@ -5,9 +5,9 @@
 
   <testsuite name="3-shopping-cart"
     errors="5" failures="0" hostname="" id="" package="3-shopping-cart" skipped="0"
-    tests="6" time="5.958" timestamp="Mon, 29 Oct 2018 22:32:13 GMT">
+    tests="6" time="6.483" timestamp="Tue, 30 Oct 2018 00:05:58 GMT">
   
-    <testcase name="Aucun produit dans le panier" classname="3-shopping-cart" time="1.229" assertions="3">
+    <testcase name="Aucun produit dans le panier" classname="3-shopping-cart" time="1.493" assertions="3">
 
     
 
@@ -16,27 +16,27 @@
     
     </testcase>
   
-    <testcase name="Un ou plusieurs produits dans le panier" classname="3-shopping-cart" time="1.753" assertions="1">
+    <testcase name="Un ou plusieurs produits dans le panier" classname="3-shopping-cart" time="1.863" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Suppression d&#39;un item dans le panier" classname="3-shopping-cart" time="0.7570" assertions="1">
+    <testcase name="Suppression d&#39;un item dans le panier" classname="3-shopping-cart" time="0.7580" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Augmentation de la quantite associee a un item dans le panier" classname="3-shopping-cart" time="0.7400" assertions="1">
+    <testcase name="Augmentation de la quantite associee a un item dans le panier" classname="3-shopping-cart" time="0.7800" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Diminution de la quantite associee a un item dans le panier" classname="3-shopping-cart" time="0.7350" assertions="1">
+    <testcase name="Diminution de la quantite associee a un item dans le panier" classname="3-shopping-cart" time="0.7830" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Suppression de tous les produits dans le panier" classname="3-shopping-cart" time="0.7440" assertions="1">
+    <testcase name="Suppression de tous les produits dans le panier" classname="3-shopping-cart" time="0.8060" assertions="1">
 
     
     </testcase>

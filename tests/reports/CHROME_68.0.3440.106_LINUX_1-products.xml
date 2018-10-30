@@ -5,113 +5,14 @@
 
   <testsuite name="1-products"
     errors="0" failures="0" hostname="" id="" package="1-products" skipped="0"
-    tests="4" time="12.82" timestamp="Mon, 29 Oct 2018 22:31:52 GMT">
+    tests="4" time="13.34" timestamp="Tue, 30 Oct 2018 00:05:37 GMT">
   
-    <testcase name="Page des produits" classname="1-products" time="1.809" assertions="1">
+    <testcase name="Page des produits" classname="1-products" time="1.971" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Liste des produits pour les valeurs par defauts" classname="1-products" time="1.336" assertions="14">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Categories des produits" classname="1-products" time="3.872" assertions="48">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+    <testcase name="Liste des produits pour les valeurs par defauts" classname="1-products" time="1.392" assertions="14">
 
     
 
@@ -142,7 +43,106 @@
     
     </testcase>
   
-    <testcase name="Classement des produits" classname="1-products" time="5.799" assertions="70">
+    <testcase name="Categories des produits" classname="1-products" time="3.916" assertions="48">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Classement des produits" classname="1-products" time="6.061" assertions="70">
 
     
 

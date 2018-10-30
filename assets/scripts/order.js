@@ -1,4 +1,5 @@
 "use strict";
+/* Form validation */
   $("#order-form").validate({
 		  rules: {
 			   "first-name":{
@@ -71,6 +72,8 @@
 			  form.submit();
 		  }  
   });
+
+  /* Regex validation for credit card's expiry date */
   jQuery.validator.addMethod("regex", 
 	  function(value,element, regexp) {
       if (regexp.constructor != RegExp){
